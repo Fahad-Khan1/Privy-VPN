@@ -1,0 +1,364 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><title>Privy VPN</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#2f3446", "inverse-surface": "#dee1f9", "on-primary-container": "#003b60", "secondary-fixed-dim": "#00e0b8", "on-primary": "#003354", "secondary-container": "#00ddb5", "surface-bright": "#34394a", "on-primary-fixed": "#001d33", "error-container": "#93000a", "on-error": "#690005", "primary": "#98cbff", "on-secondary": "#00382c", "outline": "#89919d", "outline-variant": "#3f4852", "error": "#ffb4ab", "on-error-container": "#ffdad6", "inverse-on-surface": "#2b3041", "surface-container": "#1a1f30", "on-surface": "#dee1f9", "on-surface-variant": "#bec7d3", "tertiary-fixed": "#6ffbbe", "on-tertiary": "#003824", "surface-container-low": "#161b2b", "surface": "#0e1323", "on-secondary-container": "#005c4a", "on-primary-fixed-variant": "#004a77", "secondary-fixed": "#48fdd3", "primary-fixed": "cee5ff", "inverse-primary": "#00639c", "surface-dim": "#0e1323", "tertiary": "#4edea3", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#080d1d", "on-background": "#dee1f9", "tertiary-fixed-dim": "#4edea3", "primary-fixed-dim": "#98cbff", "on-tertiary-fixed": "#002113", "surface-container-high": "#25293a", "background": "#0e1323", "secondary": "#44fad0", "primary-container": "#2ba8ff", "on-secondary-fixed": "#002019", "on-tertiary-container": "#00412b", "on-secondary-fixed-variant": "#005141", "surface-tint": "#98cbff", "surface-variant": "#2f3446", "tertiary-container": "#0cb880" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-md": "1rem", "space-lg": "1.25rem", "space-xxl": "2.5rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-xl": "1.75rem", "space-sm": "0.75rem", "margin": "1.25rem", "space-xxs": "0.25rem", "space-xs": "0.5rem" }, "fontFamily": { "display-timer": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Hanken Grotesk"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "telemetry-num": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Hanken Grotesk"] }, "fontSize": { "display-timer": ["36px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "700" }], "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "telemetry-num": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between px-margin h-6 pt-space-xs text-on-surface-variant font-label-md text-label-md"><span class="font-headline-sm text-label-md font-bold tracking-tight text-on-surface">9:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span><span class="material-symbols-outlined text-[16px]">wifi</span><span class="material-symbols-outlined text-[16px]">battery_full</span></div></div><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Privy VPN Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xrn9FI8iG0RY7uz_CugFzKOLpNq6a3pI0HSEbZeAOurtnvGGCkgKH-W5Ja_sLNxOUfKLRyPZs8GdCUeSK9xzbtIjvviRWhVNLoWclBWIzeIId8jh76cPiqZiLXZQStBvQdIcMLYXGbP3BXCZwJ_IlXJynZPnZDGLANiSAf-G071RORtcVcxXcRTjtsOZPF2NMnyjsQUGdco3Dm08oT5krPq95ULD05IBOU7nUj6RvAhWA_IQ8BaAb9Ds8"><h1 class="font-title-md text-title-md font-bold text-on-surface tracking-tight">Servers</h1></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-space-xxl relative flex flex-col"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Interactive Modal Handle & Status Bar Indicator -->
+<div class="flex justify-center pt-space-xxs pb-space-sm">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+<!-- Search Country & City Bar -->
+<div class="relative w-full mb-space-md">
+<div class="relative flex items-center w-full h-14 rounded-full bg-surface-container-low shadow-sm transition-all focus-within:shadow-[0_0_16px_rgba(43,168,255,0.18)]">
+<span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[22px]">search</span>
+<input class="w-full h-full pl-12 pr-12 bg-transparent text-on-surface placeholder:text-on-surface-variant/70 font-body-md text-body-md focus:outline-none" id="serverSearchInput" placeholder="Search country or city..." type="text">
+
+</div>
+</div>
+<!-- Filter Chips Row -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-md no-scrollbar -mx-margin px-margin">
+<!-- Active Filter -->
+<button class="shrink-0 flex items-center gap-space-xxs px-space-md py-space-xs rounded-full bg-secondary-container/20 text-secondary font-label-lg text-label-lg shadow-[0_0_12px_rgba(68,250,208,0.2)]">
+<span class="">All (64)</span>
+</button>
+<!-- Fastest -->
+<button class="shrink-0 flex items-center gap-space-xxs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<span class="">Fastest</span>
+</button>
+<!-- Favorites -->
+<button class="shrink-0 flex items-center gap-space-xxs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[16px] text-tertiary">star</span>
+<span class="">Favorites (4)</span>
+</button>
+<!-- Low Ping -->
+<button class="shrink-0 flex items-center gap-space-xxs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[16px] text-secondary">public</span>
+<span class="">Low Ping</span>
+</button>
+</div>
+<!-- Pinned Recommended Server (Fastest Auto-Connect) -->
+<div class="relative mb-space-lg group">
+<div class="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-secondary/40 via-primary/30 to-secondary/10 opacity-70 blur-sm group-hover:opacity-100 transition duration-300"></div>
+<div class="relative w-full rounded-2xl bg-surface-container p-space-md shadow-md flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<!-- Bolt Avatar -->
+<div class="relative shrink-0 w-12 h-12 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary shadow-[0_0_16px_rgba(68,250,208,0.3)]">
+<span class="material-symbols-outlined text-[26px]">bolt</span>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-[10px]" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</span>
+</div>
+<!-- Server Meta -->
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md font-bold text-on-surface truncate">Auto - Fastest Server</span>
+<span class="px-space-xs py-0.5 rounded-md bg-secondary/10 text-secondary font-label-md text-label-md uppercase tracking-wider">Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Connects to optimal public node</p>
+</div>
+</div>
+<!-- Ping & Selection Metric -->
+<div class="shrink-0 flex items-center gap-space-sm pl-space-xs">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-secondary">24<span class="font-label-md text-label-md font-normal text-on-surface-variant ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2.5 mt-0.5">
+<span class="w-1 h-1.5 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2.5 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2.5 rounded-sm bg-tertiary"></span>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Server List Header -->
+<div class="flex items-center justify-between mb-space-sm px-space-xs">
+<span class="font-label-lg text-label-lg font-bold uppercase tracking-wider text-on-surface-variant">Available Locations</span>
+<span class="font-label-md text-label-md text-on-surface-variant/80">Sort: Latency</span>
+</div>
+<!-- Server Cards Stack -->
+<div class="flex flex-col gap-space-xs w-full">
+<!-- 1. Japan (Tokyo) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<!-- Flag Placeholder with detailed cyber-privacy ambient style -->
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Stylized macro badge of the flag of Japan, sharp crisp red circle on minimalist deep silk white texture, digital fintech dark theme ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhsRyGlW5qI9vaWb3IABcuTBj8UIZuTTm-NJNeaI_1sF8PGx2fu4eonlI54pPrucWQHaOX71sY0CCXum97FtCNfjh7mce0HHx1eusJmACNbbvuToRDkSwEBivdQe4mAs5w9E2iLq0CHx6FEw6MAqoJfuFbbGReH6wz3iGD4YmT3UunHtdHAdtI39tDooB59gi4MGMFL3iHdb3aqo-2diut2jD-_d4TtDe8rgJ1slOwpp7LqU5uyhoHiA">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Japan — Tokyo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-tertiary">36<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-1.5 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2 rounded-sm bg-tertiary"></span>
+</div>
+</div>
+<button aria-label="Favorite Tokyo" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-primary-container hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</button>
+</div>
+</div>
+<!-- 2. Germany (Frankfurt) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Circular national flag icon of Germany with crisp black red and gold horizontal tricolor sheen against sleek cybernetic studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7jxeLKpSH2goG90MnagEj0DbLuMAoayuBzM1DwUDFCfe4p01FgbECR-YjH3moEUbpsFG5tqstFW5lkcDBXe5jXLqGPQ1JQw0HW0nOS5LmUULV4FMEF71iDgmlAGF9l7jnU0xLclGj1o749RUgn3Oi4FjNcJ0gMfIPpp2MPEtXRcmwjgqwgM0N5TXERVejJH6Dg755mnQ46rIJ0CBMqBjhk1s4liJPHnHslESlmB_trDfYmbQIyVgxJA">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Germany — Frankfurt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-tertiary">48<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-1.5 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2 rounded-sm bg-tertiary"></span>
+<span class="w-1 h-2 rounded-sm bg-tertiary"></span>
+</div>
+</div>
+<button aria-label="Favorite Frankfurt" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+<!-- 3. United Kingdom (London) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Union Jack flag of the United Kingdom framed inside a circular modern avatar container, elegant metallic dark tech background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1-OrJ4hthJjv0QPXPZILISTL8kS0NY_OUZCSeKRfVSvZ19-atTF0mfQhifDafXhZWQmYZI7tNc0c80940nLGSltVgnsJkPxaPTwHRuUbiYj2znWFTGUfWYQ2u8zuji71znqncESP-sUHUMrjyjouDLcZBmMdetaNCI4udUwNvwC_qlUg5kVY9qDeckWbkmaLqCdDWZYjqy29US0Warucynke6s4ubADNt3aXPhzdWVqTPjXr-x8pv3A">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">United Kingdom — London</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">15 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-primary">52<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-primary"></span>
+<span class="w-1 h-1.5 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+</div>
+</div>
+<button aria-label="Favorite London" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+<!-- 4. Canada (Toronto) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Canada red maple leaf flag emblem styled as a clean circular vector icon with dark cyan ambient backlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQVNKSIcK7oWU7uvxPxfBh1tLuR0ZekKNwcruwaTtuUZ_bfshYwa64ozODF0qdLuUfCzIn_3XtSqtxWwY9TYv6rdKcPLZZbKNoxZzHkAuBCG1Mxs04-xjPQsKZuFdDQAFXfWFvuuYtoOxVC_xfUWqbLowVDihDy9n_JUxVu6L5AWrUap7MeN0NbMI7PBhxwD3skQ5XBWNGW5IE63csL_tfv7Yda9naW0z5fcx2GnI2dnpH6hwQT5gkSQ">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Canada — Toronto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">9 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-primary">64<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-primary"></span>
+<span class="w-1 h-1.5 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+</div>
+</div>
+<button aria-label="Favorite Toronto" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+<!-- 5. Singapore (Central) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="National flag of Singapore with crescent and stars enclosed in a circular minimalist badge, soft deep slate glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtG_Rz1-tIoEQlzaYSDph4V3ybowVKWNOg7UDyjKXny2rPz6_JahnCrAhOjyp1f3zIX2WFW6od1unj_MT_rVeQPkS93OXpQMQzXbtfmSf2NkotXPYJ-UyvuBIDD22vaGwJCOM2BiFaaLtF9RVWecICF4DabRpPitw1NZPNbYkGI9Z3hIzZfuGajjd6pjjc49jxc-5XiRwpBJoguhYTRwrxPFEpVX_WoWszR_adcEnlSk7Xth6ZGTgzHA">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Singapore — Central</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-primary">78<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-primary"></span>
+<span class="w-1 h-1.5 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+</div>
+</div>
+<button aria-label="Favorite Singapore" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+<!-- Native Sponsored Card (Seamless, Non-intrusive First-Party Aesthetics) -->
+<div class="relative w-full rounded-2xl bg-surface-container-high/60 border border-outline-variant/40 p-space-md shadow-sm my-space-xs overflow-hidden flex flex-col gap-space-xs"><div class="flex items-center justify-between w-full"><div class="flex items-center gap-space-xs"><span class="px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase border border-outline/50 text-outline bg-surface-container-lowest leading-none">Ad</span><span class="text-[11px] font-label-md text-on-surface-variant/80 tracking-wide">Sponsored</span></div><a aria-label="AdChoices" class="flex items-center gap-0.5 text-on-surface-variant/70 hover:text-on-surface transition-colors cursor-pointer" href="#" title="AdChoices"><svg class="w-3.5 h-3.5 fill-current opacity-70 hover:opacity-100" viewBox="0 0 16 16"><path d="M1 1.5L8.5 14.5L16 1.5H1ZM8.5 4.2C8.9 4.2 9.2 4.5 9.2 4.9C9.2 5.3 8.9 5.6 8.5 5.6C8.1 5.6 7.8 5.3 7.8 4.9C7.8 4.5 8.1 4.2 8.5 4.2ZM7.7 7.2H9.3V12H7.7V7.2Z"></path></svg></a></div><div class="flex items-center justify-between gap-space-md w-full mt-0.5"><div class="flex items-center gap-space-md min-w-0 flex-1"><div class="shrink-0 w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">password</span></div><div class="flex flex-col min-w-0"><span class="font-title-md text-title-md text-on-surface font-semibold truncate leading-snug">NordPass Password Manager</span><div class="flex items-center gap-1.5 mt-0.5"><div class="flex items-center text-[#ffc107] text-[12px] font-bold leading-none"><span class="material-symbols-outlined text-[13px] leading-none" style="font-variation-settings: 'FILL' 1;">star</span><span class="ml-0.5 text-body-sm font-semibold text-on-surface">4.8</span></div><span class="text-on-surface-variant/50 text-[10px]">•</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Store passwords securely across devices</span></div></div></div><button class="shrink-0 px-space-lg py-2 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-sm hover:brightness-110 active:scale-95 transition-all">Install</button></div></div>
+<!-- 6. United States (Los Angeles) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="United States Stars and Stripes national flag icon inside a round high-tech glass ring with deep dark navy blue vignette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA46VLJFAIQ2R3_sY26uAjc6qDeie8y50FHg4ZnSDkxA8E1l6e1B1F5gjbYPqntoRbkBKDIqwOPKRiCqj2oQ0XWv686B7TZTLnNFfxiq4_HbbeAma_6ej8WInmM_jOa0lTbmYxvDPEznnd3VJ2TAGh_Qtdaz5TXCUNUU0ly0_m9OmVb_MrngRZqVkTJZmoL1VhkPlzsR1ycEYmkysRpyOVkI_G72f8SRS_CeFWnbPtX-8gWqdhhvOU3QQ">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">United States — Los Angeles</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">22 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-primary">85<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-primary"></span>
+<span class="w-1 h-1.5 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-primary"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+</div>
+</div>
+<button aria-label="Favorite Los Angeles" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+<!-- 7. France (Paris) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="National flag of France blue white and red vertical tricolor in a round badge with high-tech specular reflection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATBFq9MqaadWVFtpAer8WoQapeU8hd3fY2C_FiHae6NNyNp5q7w6fFoEbL7Ql4kiWCMFHi1ubw2lVPbQ0iMQOIKOyeSaX0rDomlP5Yqv1aeQxGTsvT3gDMWoU9jsFQwvbIpPvLwTp_Z4CKohZpLytIgTJZzMp5Wbqx27njTMAjRcvHVOLBn0khfPio1EoCl5fZ-3qdb89F0TQm-MO1tOtjhf6wa6Zl90FsgbbRghMjaPgUMVczTwEgXQ">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-outline"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">France — Paris</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-on-surface-variant">92<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-outline"></span>
+<span class="w-1 h-1.5 rounded-sm bg-outline"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+</div>
+</div>
+<button aria-label="Favorite Paris" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+<!-- 8. Australia (Sydney) -->
+<div class="server-item group w-full rounded-xl bg-surface-container-low hover:bg-surface-container p-space-md transition-all duration-200 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0 w-10 h-10 rounded-full overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Australian flag with Southern Cross constellation and Union canton in a circular tech medallion with subtle teal rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr7-XYsqHX-QuAqpp9CQDi-3VMHEOXVTPH5yoTTaFcv8ssqqZN0BmuQ8Q7jejAVGt8kLx42UHpN5kvldzHDJmygWvkmIfqrN--vbF_lrbVO2qscNUUXZwgjTTaB5kKTwVTaePb81xa2RDlUnt-49V50vYtg-anD5OD8vFmpZ0GkTjAvrEnAiwob3HFO5raNd5F8ygA6JLs1YznQ0qHuKkqXAW417wy4lnvChAixE84R5gc-D8UwdB1gA">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-outline"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Australia — Sydney</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">6 servers available</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-telemetry-num text-telemetry-num text-on-surface-variant">142<span class="font-label-md text-label-md text-on-surface-variant font-normal ml-0.5">ms</span></span>
+<div class="flex items-end gap-0.5 h-2 mt-0.5">
+<span class="w-1 h-1 rounded-sm bg-outline"></span>
+<span class="w-1 h-1.5 rounded-sm bg-outline"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+<span class="w-1 h-2 rounded-sm bg-surface-container-highest"></span>
+</div>
+</div>
+<button aria-label="Favorite Sydney" class="favorite-toggle w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Quick Selection Hint -->
+<div class="mt-space-lg flex items-center justify-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span class="font-body-sm text-body-sm">Servers run by volunteers; each server's log policy is shown.</span>
+</div>
+</div>
+<script>
+  // Client-side interactions for search filtering and star toggling
+  const searchInput = document.getElementById('serverSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  const serverItems = document.querySelectorAll('.server-item');
+
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    if (term.length > 0) {
+      clearBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">close</span>';
+    } else {
+      clearBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">mic</span>';
+    }
+
+    serverItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(term)) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+
+  clearBtn.addEventListener('click', () => {
+    if (searchInput.value.length > 0) {
+      searchInput.value = '';
+      clearBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">mic</span>';
+      serverItems.forEach(item => item.style.display = 'flex');
+      searchInput.focus();
+    }
+  });
+
+  // Star favorite toggle
+  document.querySelectorAll('.favorite-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+      if (isFilled) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        btn.classList.remove('text-primary-container');
+        btn.classList.add('text-on-surface-variant');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        btn.classList.add('text-primary-container');
+        btn.classList.remove('text-on-surface-variant');
+      }
+    });
+  });
+</script></main><div class="fixed bottom-0 w-full z-50 pb-safe pointer-events-none flex flex-col items-center justify-end"><div class="pointer-events-auto h-6 w-full flex items-center justify-center pb-space-xs"><div class="w-32 h-1 rounded-full bg-on-surface-variant/40"></div></div></div>
+
+
+
+
+
+</body></html>

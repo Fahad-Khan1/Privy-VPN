@@ -1,0 +1,24 @@
+# Privy VPN - project rules
+
+## Project
+- Native Android app named Privy VPN. Kotlin, Jetpack Compose, Material 3, minSdk 26.
+- Architecture: MVVM with ViewModel + StateFlow, Navigation Compose, DataStore for settings.
+- The app uses OpenVPN only. Do not add WireGuard, IKEv2 or any other protocol.
+- Server list comes from the public VPN Gate CSV (volunteer-run servers).
+
+## Design
+- The design lives in /design. Each screen folder has code.html and screen.png.
+- Colors, fonts, shapes and components are in design/privy_vpn_design_system/DESIGN.md. Follow it exactly.
+- Fonts: Plus Jakarta Sans for headings, Hanken Grotesk for body (font files are in res/font).
+- Match the screenshot and code.html of the screen I name. Do not redesign anything.
+- Use only text that appears in the design files. Do not invent new UI copy.
+
+## Honest copy (very important)
+- Servers are run by volunteers and each server's log policy varies. Always show the real log type from the server data.
+- Never write: "military-grade", "zero logs", "no logs", "guarantee", "unbreakable", "impenetrable", "certified", "audited", "RAM-only".
+- Never show fixed text for things that must reflect real state: kill switch status, DNS protection, cipher, speeds, IP address, connection time.
+- Do not build fake system dialogs. Use the real Android VPN permission request (VpnService.prepare()).
+
+## How to work
+- Do ONE screen or ONE task per request. Keep the project compiling after every change.
+- Do not add libraries or dependencies without asking me first. When a dependency is
